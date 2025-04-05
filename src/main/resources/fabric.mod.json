@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "iienergylib",
+	"version": "${version}",
+	"name": "IIEnergy Lib",
+	"description": "Integrated Industry's Energy Library.",
+	"authors": [
+		"TP211"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": "https://github.com/TPCW-DRW-TP211/IIEnergyLib"
+	},
+	"license": "MIT",
+	"icon": "assets/iienergylib/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.tp211.integrated_industry.energy.IIEnergyLib"
+		],
+		"client": [
+			"org.tp211.integrated_industry.energy.IIEnergyLibClient"
+		]
+	},
+	"mixins": [
+		"iienergylib.mixins.json",
+		{
+			"config": "iienergylib.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.12",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
