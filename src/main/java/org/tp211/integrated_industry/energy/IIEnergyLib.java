@@ -19,6 +19,25 @@ public class IIEnergyLib implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		class PowerEnergy {
+			public int volt;
+			public int watt;
+			public String MachineUUID;
+			public int PowerEnergyStatus;
+			public int PowerEnergyChange;
+			public int UsedWatt;
+			public int UsedVolt;
+			public String ExtInfo;
+
+			public PowerEnergy(int volt, int watt, String MachineUUID, int PowerEnergyStatus, int PowerEnergyChange, int UsedWatt, int UsedVolt, String ExtInfo) {
+				this.volt = volt;
+				this.watt = watt;
+				this.MachineUUID = MachineUUID;
+				this.PowerEnergyStatus = PowerEnergyStatus;
+				this.PowerEnergyChange = PowerEnergyChange;
+				this.UsedWatt = UsedWatt;
+				this.UsedVolt = UsedVolt;
+			}
+		}
 	}
 }
